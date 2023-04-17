@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0% 20%;
+  background: #2F3D4C;
 }
 
 code {
@@ -19,10 +20,14 @@ code {
   box-sizing: border-box;
 }
 
-.recipe-card {
+.recipe-card, .cuisine-card {
   radius: 8px;
   width: 200px;
   height: 250px;
+}
+
+.cuisine-card {
+  margin: 20px;
 }
 
 img {
@@ -33,4 +38,31 @@ img {
 
 h1, h3 {
   margin: 20px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.link {
+  margin-right: 20px;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  background: #a9a9a9;
+  color: white;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+}
+
+.link.active{
+  background: red;
+}
+
+h4 {
+  font-size: 8px;
 }
