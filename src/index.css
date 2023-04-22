@@ -59,6 +59,16 @@ h1, h3 {
   border-radius: 40px;
 }
 
+.search {
+  margin-top: 20px;
+  background: white;
+  border-radius: 50px;
+}
+
+.MuiInputBase-root {
+  border-color: transparent !important;
+}
+
 .link.active{
   background: red;
 }

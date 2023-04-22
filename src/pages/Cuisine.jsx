@@ -25,7 +25,9 @@ function Cuisine() {
                 justifyContent="center"
                 alignItems="center">
                 {cuisine.map((item) => {
-                    return (<Card className="cuisine-card">
+                    return (
+                    <Card className="cuisine-card">
+                        <Link to={'/details/' + item.id}>
                         <CardMedia
                             sx={{ height: 140 }}
                             image={item.image}
@@ -36,6 +38,7 @@ function Cuisine() {
                                 {item.title}
                             </Typography>
                         </CardContent>
+                        </Link>
                     </Card>)
                 })}
             </Grid>

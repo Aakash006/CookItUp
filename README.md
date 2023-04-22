@@ -1,2 +1,2 @@
-CookItUp
-An application that will display recipes.
+# CookItUp
+## An application that will display recipes.

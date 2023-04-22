@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Link } from 'react-router-dom';
 import '@splidejs/splide/css';
 
 function Popular() {
@@ -39,16 +40,18 @@ function Popular() {
                     return (
                         <SplideSlide>
                             <Card className="recipe-card">
-                                <CardMedia
-                                    sx={{ height: 140 }}
-                                    image={item.image}
-                                    title="green iguana"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="p" component="div">
-                                        {item.title}
-                                    </Typography>
-                                </CardContent>
+                                <Link to={'/details/' + item.id}>
+                                    <CardMedia
+                                        sx={{ height: 140 }}
+                                        image={item.image}
+                                        title="green iguana"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="p" component="div">
+                                            {item.title}
+                                        </Typography>
+                                    </CardContent>
+                                </Link>
                             </Card>
                         </SplideSlide>
                     )
