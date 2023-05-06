@@ -28,7 +28,9 @@ function Veggie() {
     }
     return (
         <div >
-            <h3>Vegetarian picks</h3>
+            <span>
+                <h3 className="title">Vegetarian picks</h3>
+            </span>
             <Splide options={{
                 perPage: 3,
                 arrows: false,
@@ -40,14 +42,14 @@ function Veggie() {
                     return (
                         <SplideSlide>
                             <Card className="recipe-card">
-                                <Link to={'/details/' + item.id}>
+                                <Link className="card-link" to={'/details/' + item.id}>
                                     <CardMedia
                                         sx={{ height: 140 }}
                                         image={item.image}
                                         title="green iguana"
                                     />
                                     <CardContent>
-                                        <Typography gutterBottom variant="p" component="div">
+                                        <Typography className="recipe-title" gutterBottom variant="p" component="div">
                                             {item.title}
                                         </Typography>
                                     </CardContent>

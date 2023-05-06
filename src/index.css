@@ -1,16 +1,16 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0% 20%;
-  background: #2F3D4C;
+  background: #e3e2df;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -20,10 +20,15 @@ code {
   box-sizing: border-box;
 }
 
-.recipe-card, .cuisine-card {
+.recipe-card,
+.cuisine-card {
   radius: 8px;
   width: 200px;
   height: 250px;
+}
+
+.recipe-title {
+  font-size: 20px;
 }
 
 .cuisine-card {
@@ -36,7 +41,8 @@ img {
   border-radius: 10px;
 }
 
-h1, h3 {
+h1,
+h3 {
   margin: 20px;
 }
 
@@ -46,33 +52,102 @@ h1, h3 {
   margin-top: 20px;
 }
 
+.tabs-sec {
+  margin-top: 20px;
+}
+
+.Mui-selected {
+  color: white !important;
+}
+
+.MuiButtonBase-root {
+  z-index: 1 !important;
+}
+
+.MuiTabs-indicator {
+  background-color: #123c69 !important;
+  height: 50px !important;
+  border-radius: 15px;
+}
+
+.title {
+  margin-left: 0px;
+  color: #123c69;
+  text-decoration: underline #116466 5px;
+  text-underline-offset: 8px;
+  margin-bottom: 35px;
+}
+
 .link {
   margin-right: 20px;
   text-decoration: none;
   align-items: center;
   text-align: center;
-  background: #a9a9a9;
-  color: white;
+  color: black !important;
   padding: 10px;
   width: 60px;
   height: 60px;
   border-radius: 40px;
 }
 
+.link.active {
+  border-color: #116466;
+  border-style: solid;
+}
+
 .search {
   margin-top: 20px;
   background: white;
   border-radius: 50px;
+  width: 60% !important;
+  margin-left: 20% !important;
+}
+
+.MuiInputBase-input {
+  padding: 10px !important;
+}
+
+.logo {
+  margin-left: 0px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  font-family: "Lato", sans-serif;
+  color: #123c69;
+}
+
+.logo-link {
+  text-decoration: none !important;
+}
+
+.card-link {
+  text-decoration: none !important;
+  padding: 10px;
+}
+
+.card-link:hover {
+  text-decoration: underline #116466 !important;
+  text-underline-offset: 5px;
+  box-shadow: 1;
+}
+
+.knife {
+  color: #116466 !important;
+}
+
+.App {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .MuiInputBase-root {
   border-color: transparent !important;
 }
 
-.link.active{
-  background: red;
-}
-
 h4 {
   font-size: 8px;
+}
+
+a {
+  color: black !important;
 }

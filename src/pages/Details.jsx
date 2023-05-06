@@ -48,6 +48,7 @@ function Details() {
         setValue(newValue);
     };
     useEffect(() => {
+        console.log("here")
         getRecipe();
     }, [params.id]);
 
@@ -59,19 +60,22 @@ function Details() {
     }
     return (
         <div>
-            <h3>{recipe.title}</h3>
+            <span><h3 className="title">{recipe.title}</h3></span>
             <img src={recipe.image} />
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+            <Box className="tabs-sec" sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <Tabs indicatorColor="primary" textColor="primary"value={value} onChange={handleChange} aria-label="basic tabs example">
                     <Tab label="Instructions" {...a11yProps(0)} />
                     <Tab label="Ingredients" {...a11yProps(1)} />
                 </Tabs>
             </Box>
-            <TabPanel value={value} index={0}>
-                Item One
+            <TabPanel className="summary" value={value} index={0}>
+                <span dangerouslySetInnerHTML={{__html: recipe.summary}}></span>
+                <span dangerouslySetInnerHTML={{__html: recipe.instructions}}></span>
             </TabPanel>
-            <TabPanel value={value} index={1}>
-                Item Two
+            <TabPanel className="summary" value={value} index={1}>
+                <ul>{recipe.extendedIngredients?.map((ingredient)=>
+                    <li key={ingredient.id}>{ingredient.original}</li>
+                )}</ul>
             </TabPanel>
         </div>
     )
