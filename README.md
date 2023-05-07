@@ -4,4 +4,4 @@ An user can search for a keyword like 'chicken' and get results based on the sea
 The application also enables the user to click on a recipe and get instructions on how to make it
 along with the ingredients required.
 
-The application is made with **React** and **Material UI**.
+The application is made with **React.js** and **Material UI**.
