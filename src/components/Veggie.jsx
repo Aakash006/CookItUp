@@ -15,17 +15,13 @@ function Veggie() {
   }, []);
 
   const getVeggie = async () => {
-    if (localStorage.getItem("veggie") !== null) {
-      setVeggie(JSON.parse(localStorage.getItem("veggie")));
-    } else {
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&diet=vegetarian`
-      );
-      const data = await api.json();
-      console.log(data.recipes);
-      setVeggie(data.recipes);
-      localStorage.setItem("veggie", JSON.stringify(data.recipes));
-    }
+    const api = await fetch(
+      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&diet=vegetarian`
+    );
+    const data = await api.json();
+    console.log(data.recipes);
+    setVeggie(data.recipes);
+    localStorage.setItem("veggie", JSON.stringify(data.recipes));
   };
   return (
     <div>
