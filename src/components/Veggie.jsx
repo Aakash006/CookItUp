@@ -15,7 +15,7 @@ function Veggie() {
   }, []);
 
   const getVeggie = async () => {
-    if (localStorage.getItem("veggie")) {
+    if (localStorage.getItem("veggie") !== null) {
       setVeggie(JSON.parse(localStorage.getItem("veggie")));
     } else {
       const api = await fetch(
