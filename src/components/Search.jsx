@@ -11,7 +11,6 @@ function Search() {
   const handleSubmit = (e) => {
     e.preventDefault();
     nav("/searched/" + input);
-    console.log(input);
   };
 
   return (
@@ -20,7 +19,7 @@ function Search() {
         <TextField
           className="search"
           sx={{
-            "& fieldset": { border: 'none' },
+            "& fieldset": { border: "none" },
           }}
           id="input-with-icon-textfield"
           InputProps={{
