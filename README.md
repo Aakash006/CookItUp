@@ -5,3 +5,5 @@ The application also enables the user to click on a recipe and get instructions 
 along with the ingredients required.
 
 The application is made with **React.js** and **Material UI**.
+
+The link to this web application can be found here https://cook-it-up.vercel.app/
