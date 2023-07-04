@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Grid } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -13,13 +13,16 @@ function Cuisine() {
     getCuisine(params.type);
   }, [params.type]);
 
-  const getCuisine = async (name) => {
-    const api = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=10&cuisine=${name}`
-    );
-    const data = await api.json();
-    setCuisine(data.results);
-  };
+  const getCuisine = useCallback(
+    async (name) => {
+      const api = await fetch(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=10&cuisine=${name}`
+      );
+      const data = await api.json();
+      setCuisine(data.results);
+    },
+    [params.type]
+  );
 
   return (
     <div>
